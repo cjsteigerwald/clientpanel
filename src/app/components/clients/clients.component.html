@@ -3,7 +3,9 @@
     <h2><i class="fa fa-users"></i> Clients</h2>
   </div>
   <div class="col-md-6">
-    <h5 class="text-right text-secondary">Total Owed: {{ totalOwed | currency:"USD":"symbol" }}</h5>
+    <h5 class="text-right text-secondary">
+      Total Owed: {{ totalOwed | currency: "USD":"symbol" }}
+    </h5>
   </div>
 </div>
 <table *ngIf="clients?.length > 0; else noClients" class="table table-striped">
@@ -22,7 +24,7 @@
         <a
           routerLink="client/{{ client.id }}"
           class="btn btn-secondary btn-small"
-          ><i class="fa fa-arrow-circle-o-right">app-client-details</i>
+          ><i class="fa fa-arrow-circle-o-right"> Details</i>
         </a>
       </td>
     </tr>

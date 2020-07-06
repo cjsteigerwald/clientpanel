@@ -9,20 +9,19 @@ import { EditClientComponent } from './components/edit-client/edit-client.compon
 import { SettingsComponent } from './components/settings/settings.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
-
 const routes: Routes = [
-  {path: '', component: DashboardComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'register', component: RegisterComponent},
-  {path: 'client/add', component: AddClientComponent},
-  {path: 'client/add:id', component: EditClientComponent},
-  {path: 'client/:id', component: ClientDetailsComponent},
-  {path: 'settings', component: SettingsComponent},
-  {path: '**', component: NotFoundComponent},
+  { path: '', component: DashboardComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'client/add', component: AddClientComponent },
+  { path: 'client/edit/:id', component: EditClientComponent },
+  { path: 'client/:id', component: ClientDetailsComponent },
+  { path: 'settings', component: SettingsComponent },
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
